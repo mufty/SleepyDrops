@@ -1,0 +1,14 @@
+services:
+  twitch-drops-miner:
+    image: dungfu/twitch-drops-miner:latest
+    container_name: twitch-drops-miner
+    ports:
+      - "5800:5800"
+    volumes:
+      - ./mishko/twitch_drops:/TwitchDropsMiner/config
+      - ./mishko/twitch_drops:/TwitchDropsMiner/cache
+    environment:
+      - USER_ID=1000
+      - GROUP_ID=1000
+      - TZ=Europe/Prague
+    restart: unless-stopped
