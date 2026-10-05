@@ -1,6 +1,6 @@
 services:
   twitch-drops-miner:
-    image: dungfu/twitch-drops-miner:16.dev.c8a9bac
+    image: dungfu/twitch-drops-miner:v16.dev.1070607
     container_name: twitch-drops-miner
     ports:
       - "5800:5800"
